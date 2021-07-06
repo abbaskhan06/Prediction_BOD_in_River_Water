@@ -1,0 +1,19 @@
+Data Description
+There are 8 consecutive stations of the state water monitoring system. It's should predict the value in the eighth station by the first seven stations. The numbering of stations in the dataset is done from the target station upstream, ie closest to it - first, upstream - second, etc.
+
+Data are average monthly. The number of observations on stations is different (from 4 to about 20 years).
+
+Training and test data are chosen so that the percentage of non-NA values on stations with long and short series data is approximately the same.
+
+BOD is measured in mgO/cub. dm (ie milligrams of oxygen in the cubic decimeter)
+
+The maximum permissible value of BOD in Ukraine is 3 mgO/cub. dm.
+
+File descriptions
+train.csv - the training set
+test.csv - the test set
+sample_submission.csv - a sample submission file in the correct format
+Data fields
+Id - the unique id of a given monthly averaged data
+target - a values of monthly averaged data of BOD in target station, mgO/cub. dm
+1-7 - a values of monthly averaged data of BOD in stations 1-7 (in seven stations located from the target station upstream), mgO/cub. dm
